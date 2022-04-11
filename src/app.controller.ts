@@ -5,8 +5,13 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('/go')
-  getHello(): any {
-    return this.appService.interParkTiket();
+  // @Get('/go')
+  // getHello(): any {
+  //   return this.appService.interParkTiket();
+  // }
+
+  @Get('/check')
+  check(): any {
+    return this.appService.archCheck();
   }
 }
